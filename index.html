@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="HexColor: Ferramenta inteligente de seleção e gerenciamento de cores para desenvolvedores e designers. Extraia cores, crie paletas harmônicas e exporte para CSS ou Tailwind."
+    />
+    <link rel="icon" href="favicon.png?v=2" type="image/png" />
+    <title>HexColor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="logohex.png" alt="HexColor Logo" class="app-logo" />
+          <span class="version">v2.0 PRO</span>
+        </div>
+
+        <div class="main-preview-card">
+          <div id="mainDisplay" class="color-circle"></div>
+          <h2 id="colorName"></h2>
+          <div class="quick-inputs">
+            <input type="text" id="hexInput" maxlength="7" value="#10B981" />
+            <button id="btnDrop" class="btn-icon">💉</button>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Histórico</h3>
+          <div id="historyGrid" class="swatch-grid"></div>
+        </div>
+
+        <div class="sidebar-footer">
+          <button class="btn btn-primary" id="btnRandom">
+            🎲 Aleatório [R]
+          </button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="hero-picker">
+          <canvas id="colorCanvas"></canvas>
+          <input
+            type="range"
+            id="hueSlider"
+            class="hue-slider"
+            min="0"
+            max="360"
+            value="160"
+          />
+        </section>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">⚙️ Ajuste Fino & Formatos</button>
+            <div class="accordion-body">
+              <div class="formats-row">
+                <div class="f-group">
+                  <label>RGB</label><input type="text" id="rgbInput" readonly />
+                </div>
+                <div class="f-group">
+                  <label>HSL</label><input type="text" id="hslInput" readonly />
+                </div>
+              </div>
+              <div class="sliders-fine">
+                <div class="s-row">
+                  <span>R</span
+                  ><input type="range" id="slideR" min="0" max="255" /><em
+                    id="valR"
+                    >0</em
+                  >
+                </div>
+                <div class="s-row">
+                  <span>G</span
+                  ><input type="range" id="slideG" min="0" max="255" /><em
+                    id="valG"
+                    >0</em
+                  >
+                </div>
+                <div class="s-row">
+                  <span>B</span
+                  ><input type="range" id="slideB" min="0" max="255" /><em
+                    id="valB"
+                    >0</em
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">📸 Extração de Imagem</button>
+            <div class="accordion-body">
+              <div class="image-tool-bar">
+                <input type="file" id="imgUpload" accept="image/*" />
+                <select id="copyFormat">
+                  <option value="hex">Hexadecimal</option>
+                  <option value="rgb">RGB</option>
+                  <option value="css">CSS Variables</option>
+                </select>
+              </div>
+              <canvas id="imgCanvas"></canvas>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">🎨 Harmonias & Escalas</button>
+            <div class="accordion-body">
+              <div class="tool-section">
+                <h4>Harmonias</h4>
+                <div id="harmonyGrid" class="swatch-grid-large"></div>
+              </div>
+              <div class="tool-section">
+                <h4>Tints (Claros)</h4>
+                <div id="tintsGrid" class="scale-row"></div>
+                <h4>Shades (Escuros)</h4>
+                <div id="shadesGrid" class="scale-row"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">👁️ Acessibilidade & APCA</button>
+            <div class="accordion-body">
+              <div class="apca-container">
+                <div class="apca-card" id="apcaWhite">
+                  <p>Contraste no Branco</p>
+                  <strong id="apcaWhiteVal">0%</strong>
+                </div>
+                <div class="apca-card" id="apcaBlack">
+                  <p>Contraste no Preto</p>
+                  <strong id="apcaBlackVal">0%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">🖼️ Theme Builder</button>
+            <div class="accordion-body">
+              <div id="uiPreview" class="ui-preview-box">
+                <nav id="uiNav">Navbar</nav>
+                <div class="ui-content">
+                  <button id="uiBtn">Botão Principal</button>
+                  <div id="uiCard">Card de Exemplo</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">📤 Exportação</button>
+            <div class="accordion-body">
+              <div class="export-btns">
+                <button class="btn btn-secondary" onclick="exportTailwind()">
+                  Tailwind JSON
+                </button>
+                <button class="btn btn-secondary" onclick="exportCSSVars()">
+                  CSS Root
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div id="toast" class="toast">Mensagem</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
