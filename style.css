@@ -45,7 +45,7 @@ body {
   gap: 10px;
 }
 .app-logo {
-  max-width: 280px;
+  max-width: 180px;
   height: auto;
   display: block;
   object-fit: contain;
@@ -401,7 +401,7 @@ body {
     padding: 20px 15px;
   }
   .app-logo {
-    max-width: 130px;
+    max-width: 180px;
   }
   .content {
     padding: 20px 15px;
