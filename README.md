@@ -1,58 +1,31 @@
-# HexColor 🎨
+# HexColor Ultra
 
-Uma ferramenta avançada de seleção, exploração e gerenciamento de cores para desenvolvedores Front-end e UI/UX Designers. O projeto foi construído **100% com Vanilla JavaScript, HTML5 e CSS3**, sem o uso de frameworks, focado em alta performance e manipulação direta do DOM e da Canvas API.
+O HexColor Ultra é uma ferramenta de gerenciamento de cores desenvolvida para facilitar o fluxo de trabalho de desenvolvedores e designers. Com uma interface intuitiva, o sistema permite criar, manipular e organizar paletas de cores de forma rápida, garantindo precisão na aplicação de temas e estilos em projetos digitais.
 
-![HexColor logo](./logohex.png)
+## Funcionalidades
 
-## 🚀 Funcionalidades
+*   **Manipulação de Cores:** Geração precisa de códigos hexadecimais com interface de controle otimizada.
+*   **Gestão de Paletas:** Criação e armazenamento de combinações de cores para uso recorrente em diferentes projetos.
+*   **Interface Minimalista:** Foco na usabilidade e na rapidez para copiar códigos durante o desenvolvimento.
+*   **Persistência Local:** Seus dados e paletas são salvos diretamente no navegador, eliminando a necessidade de logins.
+*   **Design Responsivo:** Adaptado para diferentes resoluções, mantendo a produtividade em qualquer dispositivo.
 
-* **Seletor de Cores Avançado:** Color picker customizado construído com a `Canvas API` simulando ferramentas de design profissionais.
-* **Captura de Tela (EyeDropper):** Integração com a `EyeDropper API` nativa dos navegadores para capturar cores de qualquer lugar do seu monitor.
-* **Extração via Imagem:** Faça upload de imagens e clique em qualquer pixel para extrair a cor exata em HEX, RGB ou Variável CSS.
-* **Escalas e Harmonias:** Geração matemática em tempo real de *Tints* (tons claros), *Shades* (tons escuros) e paletas harmônicas (complementares, análogas, triádicas).
-* **Acessibilidade (APCA):** Validação de contraste de texto e fundo utilizando o moderno algoritmo APCA (preparado para a futura WCAG 3.0).
-* **UI Theme Builder:** Preview em tempo real de como a sua cor selecionada se comporta em componentes de interface (Navbars, Botões, Cards).
-* **Exportação Profissional:** Exporte seu histórico de cores com um clique para `CSS Variables` (:root) ou formato JSON para o `tailwind.config.js`.
+## Tecnologias
 
-## 🛠️ Tecnologias Utilizadas
+*   **Frontend:** HTML5, CSS3 e JavaScript (Vanilla), priorizando performance e leveza.
+*   **Arquitetura:** Aplicação web estática com foco em acesso imediato e ausência de dependências complexas.
 
-* **HTML5** (Semântica e estrutura)
-* **CSS3** (Variáveis CSS, Flexbox, Grid, Dark Mode)
-* **JavaScript (ES6+)** (Vanilla JS, lógica matemática de cores)
-* **Canvas API** (Renderização do espectro de cores e imagens)
-* **Web APIs** (`EyeDropper`, `Clipboard API`, `FileReader`)
-* **LocalStorage** (Persistência do histórico de cores)
+## Acesso
 
-## 📂 Estrutura do Projeto
+A ferramenta está disponível publicamente para uso imediato:
+[Acesse o HexColor Ultra](https://hexcolorultra.vercel.app/)
 
-```text
-/
-├── index.html       # Estrutura principal da aplicação
-├── style.css        # Estilização completa (Dark Mode default)
-├── script.js        # Lógica da aplicação e manipulação do Canvas
-├── logohex.png      # Logo do projeto
-└── favicon.png      # Ícone do navegador
-```
+## Autor
 
-## ⚙️ Como Executar
+Desenvolvido por **Guilherme Braga**.
 
-Por ser um projeto puramente estático (Vanilla), você não precisa de Node.js, NPM ou processos de build.
+*   **Portfólio:** [guibraga.com.br](https://guibraga.com.br)
+*   **GitHub:** [github.com/guibragz](https://github.com/guibragz)
 
-1. Clone este repositório:
-   ```bash
-   git clone [https://github.com/seu-usuario/hexcolor.git](https://github.com/seu-usuario/hexcolor.git)
-   ```
-2. Entre na pasta do projeto:
-   ```bash
-   cd hexcolor
-   ```
-3. Abra o arquivo `index.html` diretamente no seu navegador ou utilize a extensão **Live Server** no VS Code (recomendado para evitar bloqueios de CORS ao ler imagens locais no Canvas).
-
-## ⌨️ Atalhos de Teclado
-
-* `C` - Copia o código HEX da cor atual para a área de transferência.
-* `R` - Gera uma cor aleatória.
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Sinta-se à vontade para usar, modificar e distribuir.
+---
+*Projeto de código aberto. Sugestões de melhoria e relatórios de bugs podem ser enviados via GitHub Issues.*
