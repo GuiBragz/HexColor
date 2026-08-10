@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hexcolorultra.vercel.app/sitemap.xml
